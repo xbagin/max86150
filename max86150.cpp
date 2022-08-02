@@ -2,20 +2,23 @@
 
 /**
  * @brief max86150 constructor, running without interrupts
- * @param i2c address of I2C object to be used for communication with max86150
+ * @param sda SDA pin name
+ * @param scl SCL pin name
 */
 max86150::max86150(PinName sda, PinName scl) : max86150::max86150(sda, scl, NC) { }
 
 /**
  * @brief max86150 constructor, running with interrupts
- * @param i2c address of I2C object to be used for communication with max86150
+ * @param sda SDA pin name
+ * @param scl SCL pin name
  * @param inpterrupt_pin name of pin to be used for interrupt
 */
 max86150::max86150(PinName sda, PinName scl, PinName interrupt_pin) : max86150::max86150(sda, scl, NC, NULL) { }
 
 /**
  * @brief max86150 constructor, running with interrupts
- * @param i2c address of I2C object to be used for communication with max86150
+ * @param sda SDA pin name
+ * @param scl SCL pin name
  * @param inpterrupt_pin name of pin to be used for interrupt
  * @param interrupt_handler pointer to function to be called at the end of internal interrupt routine, needs to be interrupt save!
 */
